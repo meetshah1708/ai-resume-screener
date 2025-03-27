@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/Card";
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import { JobDescription } from "./Dashboard";
 
 interface JobDescriptionInputProps {

@@ -16,25 +16,23 @@ const queryClient = new QueryClient();
 
 function App() {
   return (
-    <React.StrictMode>
-      <ThemeProvider defaultTheme="light" storageKey="resume-ai-theme">
-        <QueryClientProvider client={queryClient}>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/dashboard" element={<DashboardPage />} />
-                <Route path="/candidate/:id" element={<CandidateProfilePage />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </BrowserRouter>
-          </TooltipProvider>
-        </QueryClientProvider>
-      </ThemeProvider>
-    </React.StrictMode>
+    <ThemeProvider defaultTheme="light" storageKey="resume-ai-theme">
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/candidate/:id" element={<CandidateProfilePage />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 
